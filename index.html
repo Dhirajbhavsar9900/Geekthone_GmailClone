@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GmailCLone</title>
+    <link rel="icon"href="./Images/titlelogo.ico">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="https://cdn.userfront.com/@userfront/toolkit@latest/dist/web-component.umd.js"></script>
+    
+
+</head>
+<body class="bg-[#111111]  overflow-x-hidden">
+
+    <nav>
+        <div class="p-[8px] flex">
+            <div class="flex w-[200px] pr-[30px] mt-[4px]">
+                <div class="p-[12px] mx-[7px] ">
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 16px;"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                </div>
+                <div class="w-[400px]">
+                    <a href="./index.html">
+                       <img src="/Images/Gmail Clone_Geekthone.png" alt="">
+                    </a>
+                </div>
+            </div>
+            
+
+           <div class="w-[1570px] flex">
+                <div class="w-[1482px] pr-[30px] flex gap-[700px]">
+                    <div class="px-[10px] bg-[#474747] ml-[50px] rounded-[30px] w-[720px]">
+                        <!-- <input type="search" class="w-[400px]  h-[30px] mt-[6px] bg-[#474747] border-0"> -->
+                        <div class="flex mt-[4px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 30px" class="p-[6px] " ><path fill="#dfdfdf" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+
+                            <input type="text" placeholder="Search mail" class="w-[640px] m-[5px] h-[35px] bg-[#474747] outline-none text-white placeholder-[#E9E9E9] font-medium">
+                            
+                            <svg class="p-[8px]" style="fill:#E9E9E9;" xmlns="http://www.w3.org/2000/svg" width="40px" viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"></path></svg>
+                        </div>
+                    </div>    
+                    <div class="ml-[20px] flex">
+                        <div class="flex ml-[30px]">
+                            <svg  class="w-[30px]  m-[2px] p-[8px] cursor-pointer" style="fill: #E9E9E9;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+        
+                            <svg class="w-[35px]  m-[2px] p-[8px] cursor-pointer" style="fill: #E9E9E9;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+                        </div>
+        
+                        <div class="flex">
+
+                            <a href="https://www.google.co.in/intl/en-GB/about/products?tab=mh" class="m-[2px] p-[7px] "> <svg style="fill: white;"  class="w-[30px]  cursor-pointer" focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path><image src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="" height="24" width="24" style="border:none;display:none \9"></image></svg></a>
+                            
+                            <div style="width: 50px; height: 50px;">
+                                <a href="https://github.com/Dhirajbhavsar9900">
+                                    <img src="./Images/me.jpg" alt="" class="h-[50px] rounded-[100%] w-[100px] p-[9px] cursor-pointer" >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </nav>
+f
+    <section class="w-[100%] flex">
+        <div class="w-[12%]">
+            <div class="flex pl-[8px] mt-[0px] mb-[16px]">
+                <div class=" bg-white flex w-[60%] rounded-[15px] h-[55px] cursor-pointer">
+                   <div class="flex place-self-center gap-0 items-center ml-2 cursor-pointer gap-2">
+                        <svg style="fill: #1b1b1b;" class="w-[18px] m-[10px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+                        <spam class="text-[14px]">Compose</span>
+                   </div>
+                </div>
+            </div>
+
+            <div class="">
+
+            </div>
+
+            <div class="w-[100%]">
+                <div class="flex flex-col self-center">
+                    <div class=" flex bg-[#595959] pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer">
+                        <i class="fa-solid fa-inbox mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
+                        <div class="flex self-center">
+                            <h1 class="text-white text-[15px] font-semibold text-center">Inbox</h1>
+                            <span class="text-white text-[12px] ml-[75px] p-[3px] font-semibold">5,000</span>
+                        </div>
+                    </div>
+                    
+                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
+                        <i class="fa-regular fa-star mr-[16px] p-[2px]" style="color:#dad9d9;"></i>
+                        <div class="flex self-center">
+                            <h1 class="text-white text-[15px] font-normal text-center">Starred</h1>
+                        </div>
+                    </div>
+
+                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
+                        <i class="fa-regular fa-clock mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
+                        <div class="flex self-center">
+                            <h1 class="text-white text-[15px] font-normal text-center">Snoozed</h1>
+                        </div>
+                    </div>
+
+                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
+                        <i class="fa-solid fa-paper-plane mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
+                        <div class="flex self-center">
+                            <h1 class="text-white text-[15px] font-normal text-center">Sent</h1>
+                        </div>
+                    </div>
+
+                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
+                        <i class="fa-regular fa-file mr-[21px] p-[2px]" style="color:#dad9d9;"></i>
+                        <div class="flex self-center">
+                            <h1 class="text-white text-[15px] font-semibold text-center">Drafts</h1>
+                        </div>
+                    </div>
+
+
+                    <div id="more-btn" class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
+                        <i class="fa-solid fa-chevron-down mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
+                        <div class="flex self-center">
+                            <h1 class="text-white text-[15px] font-normal text-center">More</h1>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="label" class="flex justify-between self-center m-[20px] mr-0">
+                    <h1 class="text-white font-semibold text-[17px] pt-3">Labels</h1>
+
+                    <div class="hover:cursor-pointer hover:bg-[#6f6f6f5e] hover:rounded-[100%] w-[40px] h-10 flex items-center">
+                        <i class="fa-solid fa-plus self-center p-[12px] " style="color: white; "></i>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- left part of main gmail -->
+        <main class="w-[83%] ml-8 h-[840px] " >
+            <div class="bg-[#383737] h-12 rounded-t-[20px]">
+                <input type="checkbox" width="40px">
+            </div>
+        </main>
+        <!-- side app part -->
+        <div>
+
+        </div>
+    </section>
+    
+</body>
+</html>
