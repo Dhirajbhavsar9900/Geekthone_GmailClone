@@ -1,151 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GmailCLone</title>
-    <link rel="icon"href="./Images/titlelogo.ico">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script defer src="https://cdn.userfront.com/@userfront/toolkit@latest/dist/web-component.umd.js"></script>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail</title>
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="icon" type="image/png" href="./app/assets/img/favicon.png">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./presets.css">
+  <link rel="stylesheet" href="./main.css">
+  <!-- <link rel="stylesheet" href="./prefix-main.css"> -->
 </head>
-<body class="bg-[#111111]  overflow-x-hidden">
 
-    <nav>
-        <div class="p-[8px] flex">
-            <div class="flex w-[200px] pr-[30px] mt-[4px]">
-                <div class="p-[12px] mx-[7px] ">
-                    <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 16px;"><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                </div>
-                <div class="w-[400px]">
-                    <a href="./index.html">
-                       <img src="/Images/Gmail Clone_Geekthone.png" alt="">
-                    </a>
-                </div>
-            </div>
-            
+<body>
 
-           <div class="w-[1570px] flex">
-                <div class="w-[1482px] pr-[30px] flex gap-[700px]">
-                    <div class="px-[10px] bg-[#474747] ml-[50px] rounded-[30px] w-[720px]">
-                        <!-- <input type="search" class="w-[400px]  h-[30px] mt-[6px] bg-[#474747] border-0"> -->
-                        <div class="flex mt-[4px] ">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 30px" class="p-[6px] " ><path fill="#dfdfdf" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+  <div class="body-wrapper" >
 
-                            <input type="text" placeholder="Search mail" class="w-[640px] m-[5px] h-[35px] bg-[#474747] outline-none text-white placeholder-[#E9E9E9] font-medium">
-                            
-                            <svg class="p-[8px]" style="fill:#E9E9E9;" xmlns="http://www.w3.org/2000/svg" width="40px" viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"></path></svg>
-                        </div>
-                    </div>    
-                    <div class="ml-[20px] flex">
-                        <div class="flex ml-[30px]">
-                            <svg  class="w-[30px]  m-[2px] p-[8px] cursor-pointer" style="fill: #E9E9E9;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+    <header class="header">
+
+      <div class="header-group">
+        <div class="icons">
+          <button id="header-menu" class="btn header-menu tooltip" data-info="Main menu" >
+            <img src="./app/assets/icons/menu_black_24dp.svg" alt="Main menu" class="btn-icon btn-icon-alt">
+          </button>
+        </div>
+  
+        <a href="#" class="header-logo" >
+          <img src="./app/assets/icons/logo_gmail_lockup_default_1x_r2.png" alt="Gmail" >
+        </a>
+
+      </div>
+
+      <form class="header-search" action="">
+
+        <div class="icons">
+          <button id="js-header-search" class="btn btn-nofill tooltip"  data-info="Search">
+            <img src="./app/assets/icons/search_black_24dp.svg" alt="Search"class="btn-icon btn-icon-alt">
+          </button>
+        </div>
+
+        <input type="search" class="header-search-input" placeholder="Search mail">
         
-                            <svg class="w-[35px]  m-[2px] p-[8px] cursor-pointer" style="fill: #E9E9E9;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
-                        </div>
-        
-                        <div class="flex">
-
-                            <a href="https://www.google.co.in/intl/en-GB/about/products?tab=mh" class="m-[2px] p-[7px] "> <svg style="fill: white;"  class="w-[30px]  cursor-pointer" focusable="false" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path><image src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="" height="24" width="24" style="border:none;display:none \9"></image></svg></a>
-                            
-                            <div style="width: 50px; height: 50px;">
-                                <a href="https://github.com/Dhirajbhavsar9900">
-                                    <img src="./Images/me.jpg" alt="" class="h-[50px] rounded-[100%] w-[100px] p-[9px] cursor-pointer" >
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div>
+        <div class="icons">
+          <button type="reset" class="btn" data-info="Options">
+            <img src="./app/assets/icons/clear_black_24dp.svg" alt="Options" class="btn-icon btn-icon-alt">
+          </button>
         </div>
-    </nav>
-f
-    <section class="w-[100%] flex">
-        <div class="w-[12%]">
-            <div class="flex pl-[8px] mt-[0px] mb-[16px]">
-                <div class=" bg-white flex w-[60%] rounded-[15px] h-[55px] cursor-pointer">
-                   <div class="flex place-self-center gap-0 items-center ml-2 cursor-pointer gap-2">
-                        <svg style="fill: #1b1b1b;" class="w-[18px] m-[10px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
-                        <spam class="text-[14px]">Compose</span>
-                   </div>
-                </div>
-            </div>
 
-            <div class="">
-
-            </div>
-
-            <div class="w-[100%]">
-                <div class="flex flex-col self-center">
-                    <div class=" flex bg-[#595959] pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer">
-                        <i class="fa-solid fa-inbox mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
-                        <div class="flex self-center">
-                            <h1 class="text-white text-[15px] font-semibold text-center">Inbox</h1>
-                            <span class="text-white text-[12px] ml-[75px] p-[3px] font-semibold">5,000</span>
-                        </div>
-                    </div>
-                    
-                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
-                        <i class="fa-regular fa-star mr-[16px] p-[2px]" style="color:#dad9d9;"></i>
-                        <div class="flex self-center">
-                            <h1 class="text-white text-[15px] font-normal text-center">Starred</h1>
-                        </div>
-                    </div>
-
-                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
-                        <i class="fa-regular fa-clock mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
-                        <div class="flex self-center">
-                            <h1 class="text-white text-[15px] font-normal text-center">Snoozed</h1>
-                        </div>
-                    </div>
-
-                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
-                        <i class="fa-solid fa-paper-plane mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
-                        <div class="flex self-center">
-                            <h1 class="text-white text-[15px] font-normal text-center">Sent</h1>
-                        </div>
-                    </div>
-
-                    <div class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
-                        <i class="fa-regular fa-file mr-[21px] p-[2px]" style="color:#dad9d9;"></i>
-                        <div class="flex self-center">
-                            <h1 class="text-white text-[15px] font-semibold text-center">Drafts</h1>
-                        </div>
-                    </div>
-
-
-                    <div id="more-btn" class=" flex  pl-[26px] pr-[12px] items-center rounded-r-[20px] h-8 cursor-pointer hover:bg-[#6f6f6f5e]">
-                        <i class="fa-solid fa-chevron-down mr-[18px] p-[2px]" style="color:#dad9d9;"></i>
-                        <div class="flex self-center">
-                            <h1 class="text-white text-[15px] font-normal text-center">More</h1>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div id="label" class="flex justify-between self-center m-[20px] mr-0">
-                    <h1 class="text-white font-semibold text-[17px] pt-3">Labels</h1>
-
-                    <div class="hover:cursor-pointer hover:bg-[#6f6f6f5e] hover:rounded-[100%] w-[40px] h-10 flex items-center">
-                        <i class="fa-solid fa-plus self-center p-[12px] " style="color: white; "></i>
-                    </div>
-                    
-                </div>
-            </div>
+        <div class="icons">
+          <button id="header-search-options" class="btn tooltip" data-info="Options">
+            <!-- <img src="./app/assets/icons/arrow_drop_down_black_24dp.svg" alt="Options" > -->
+            <svg class="btn-icon btn-icon-alt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"></path></svg>
+          </button>
         </div>
-        <!-- left part of main gmail -->
-        <main class="w-[83%] ml-8 h-[840px] " >
-            <div class="bg-[#383737] h-12 rounded-t-[20px]">
-                <input type="checkbox" width="40px">
-            </div>
-        </main>
-        <!-- side app part -->
-        <div>
 
-        </div>
+      </form>
+
+      <div class="header-group profile" >
+
+          <div class="icons">
+            <button id="header-info" class="btn">
+              <img src="./app/assets/icons/help_outline_black_24dp.svg" alt="Support" class="btn-icon btn-icon-alt">
+            </button>
+          </div>
+
+          <div class="icons">
+            <button id="header-settings" class="btn" data-info="Settings">
+              <img src="./app/assets/icons/settings_black_24dp.svg" alt="Settings"  class="btn-icon btn-icon-alt">
+            </button>
+          </div>
+
+          <div class="icons">
+            <button id="header-apps" class="btn" >
+              <img src="./app/assets/icons/apps_black_24dp.svg" alt="Google apps" class="btn-icon btn-icon-alt">
+            </button>
+          </div>
+
+          <div class="icons">
+            <button id="header-profile" class="btn tooltip" >
+              <a href="https://github.com/Dhirajbhavsar9900">
+                  <img src="./app/assets/img/profile.jpg" class="btn-icon header-profile">
+              </a>
+              
+            </button>
+          </div>
+      </div>
+
+    </header>
+
+    <!-- LEFT SIDEBAR -->
+
+    <section class="left-sidebar">
+
+      <div class="left-sidebar-compose">
+        <button class="sidebar-btn-compose">
+          <!-- <img src="./app/assets/icons/create_32dp.png" alt="Compose a new email" class="sidebar-btn-compose-icon"> -->
+          <svg style="fill: #1b1b1b;" class="sidebar-btn-compose-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
+
+          <span class="sidebar-btn-compose-title">Compose</span>
+        </button>
+      </div>
+
+      <div class="left-siderbar-label">
+        <ul class="labels category-item-list">
+
+          <li class="category-item active">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/></svg>
+              <span class="category-item-title">Inbox</span>
+            </div>
+            <span class="category-item-number"header-info>32</span>
+          </li>
+
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <span class="category-item-title">Starred</span>
+            </div>
+            <span class="category-item-number">5</span>
+          </li>
+
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><path d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M15.29,16.71L11,12.41V7h2v4.59 l3.71,3.71L15.29,16.71z"/></g></svg>
+              <span class="category-item-title">Snoozed</span>
+            </div>
+            <span class="category-item-number"></span>
+          </li>
+
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              <span class="category-item-title">Sent</span>
+            </div>
+            <span class="category-item-number"></span>
+          </li>
+
+          <li class="category-item">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/></svg>
+              <span class="category-item-title">Drafts</span>
+            </div>
+            <span class="category-item-number"></span>
+          </li>
+
+          <ul class="category-item category-item-sub" id="morebtn" onclick="btnmore()">
+            <div>
+              <svg class="category-item-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+              <span class="category-item-title">More</span>
+            </div>
+
+          </ul>
+        </ul>
+      </div>
+      
+
     </section>
-    
+
+    <!-- BODY -->
+
+    <section class="inbox" >
+      
+      <!-- MAIL -->
+
+      <div class="inbox-menu">
+
+        <div class="inbox-menu-group">
+
+          <div class="inbox-btn-group" >
+            <button class="btn-alt">
+              <img src="./app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="Select" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+            </button>
+
+            <button class="btn-sm btn-alt">
+              <img src="./app/assets/icons/arrow_drop_down_black_24dp.svg" alt="Select" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+            </button>
+          </div>
+
+          <button class="btn">
+            <img src="./app/assets/icons/refresh_black_24dp.svg" alt="Refresh" class="btn-icon btn-icon-sm btn-icon-alt btn-icon-hover">
+          </button>
+
+          <button class="btn">
+            <img src="./app/assets/icons/more_vert_black_20dp.png" alt="More" class="btn-icon btn-icon-sm btn-icon-alt btn-icon-hover">
+          </button>
+
+        </div>
+
+        <div class="inbox-menu-group">
+
+          <button class="btn-lg btn-alt" >
+            <div class="inbox-menu-pagination">
+              1-50 of 262
+            </div>
+          </button>
+
+          <div class="inbox-menu-pagination-btn">
+            <button class="btn btn-nofill btn-pagination">
+              <img src="./app/assets/icons/chevron_left_black_24dp.svg" alt="Newer" class="btn-icon-sm btn-icon-alt">
+            </button>
+
+            <button class="btn btn-pagination">
+              <img src="./app/assets/icons/chevron_right_black_24dp.svg" alt="Older" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+            </button>
+          </div>
+
+          <div class="inbox-btn-group" >
+            <button class="btn-alt">
+              <img src="./app/assets/icons/keyboard_black_24dp.svg" alt="Input tools on/off" class="btn-icon-sm btn-icon-alt" >
+            </button>
+
+            <button class="btn-sm btn-alt">
+              <img src="./app/assets/icons/arrow_drop_down_black_24dp.svg" alt="Select input tool" class="btn-icon-sm btn-icon-alt">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="inbox-container">
+
+        <div class="inbox-category">
+
+          <div id="ctg-primary" class="inbox-category-item active">
+            <svg class="inbox-category-icon btn-icon btn-icon-sm btn-icon-alt active" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.11-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/></svg>
+            <span class="inbox-category-title">Primary</span>
+          </div>
+
+          <div class="inbox-category-item">
+            <svg class="inbox-category-icon btn-icon btn-icon-alt btn-icon-sm" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+            <span class="inbox-category-title">Promotions</span>
+          </div>
+
+          <div class="inbox-category-item">
+            <svg class="inbox-category-icon btn-icon btn-icon-alt btn-icon-sm" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            <span class="inbox-category-title">Social</span>
+          </div>
+
+          <div class="inbox-category-item">
+           
+            <svg class="inbox-category-icon btn-icon btn-icon-alt btn-icon-sm"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+            <span class="inbox-category-title">Updates</span>
+          </div>
+         
+
+        </div>
+
+        <!-- MAIL CONTENT -->
+        
+        <div class="content">
+          <div class="mail" id="mailss">
+              
+              <!-- <div class="inbox-message-item">
+
+                <div class="checkbox" style="margin-right: -12px;" >
+                  <button class="btn">
+                    <img src="./app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="Select" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
+                  </button>
+                </div>
+
+                <div class="message-group-hidden">
+                  <button class="btn-alt btn-nofill drag-indicator" >
+                    <img src="./app/assets/icons/drag_indicator_black_24dp.svg" alt="Drag" class="btn-icon-sm btn-icon-alt btn-icon-disabled" >
+                  </button>
+                </div>
+
+                <button class="btn star" style="margin: 0;">
+                  <img src="./app/assets/icons/star_border_black_24dp.svg" alt="Not starred" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
+                </button>
+
+                <div class="message-default" >
+
+                  <div class="message-sender message-content unread" >
+                    <span >Cascadom</span>
+                  </div>
+      
+                  <div class="message-subject message-content unread">
+                    <span>Dev Horror Stories: 👻 2000 lines of inline styles</span>
+                  </div>
+
+                  <div class="message-seperator message-content"> - </div>
+
+                  <div class="message-body message-content">
+                    <span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta error beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis harum at. Facere, exercitationem.</span>
+                  </div>
+                  
+                  <div class="gap message-content" > &nbsp; </div>
+
+                  <div class="message-date center-text unread" >
+                    <span>12:09 AM</span>
+                  </div>
+
+                </div>
+
+                <div class="message-group-hidden" >
+                  <div class="inbox-message-item-options">
+                    <button class="btn">
+                      <img src="./app/assets/icons/archive_black_24dp.svg" alt="Archive" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/delete_black_24dp.svg" alt="Delete" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/mark_as_unread_black_24dp.svg" alt="Mark as unread" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/access_time_filled_black_24dp.svg" alt="Snooze" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+              
+              <div class="inbox-message-item  message-default-unread">
+
+                <div class="checkbox" style="margin-right: -12px;" >
+                  <button class="btn">
+                    <img src="./app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="Select" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
+                  </button>
+                </div>
+
+                <div class="message-group-hidden">
+                  <button class="btn-alt btn-nofill drag-indicator" >
+                    <img src="./app/assets/icons/drag_indicator_black_24dp.svg" alt="Drag" class="btn-icon-sm btn-icon-alt btn-icon-disabled" >
+                  </button>
+                </div>
+
+                <div >
+                  <button class="btn star" style="margin: 0;">
+                    <img src="./app/assets/icons/star_border_black_24dp.svg" alt="Not starred" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
+                  </button>
+                </div>
+
+                <div class="message-default" >
+
+                  <div class="message-sender message-content" >
+                    <span >Mr. President</span>
+                  </div>
+      
+                  <div class="message-subject message-content">
+                    <span>Thanks for Saving the World</span>
+                  </div>
+
+                  <div class="message-seperator message-content"> - </div>
+
+                  <div class="message-body message-content">
+                    <span> Party at my crib next weekend, amet consectetur adipisicing elit. Soluta error beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis harum at. Facere, exercitationem.</span>
+                  </div>
+                  
+                  <div class="gap message-content" > &nbsp; </div>
+
+                  <div class="message-date center-text" >
+                    <span>4:23 PM</span>
+                  </div>
+
+                </div>
+
+                <div class="message-group-hidden" >
+                  <div class="inbox-message-item-options">
+                    <button class="btn">
+                      <img src="./app/assets/icons/archive_black_24dp.svg" alt="Archive" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/delete_black_24dp.svg" alt="Delete" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/mark_as_unread_black_24dp.svg" alt="Mark as unread" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/access_time_filled_black_24dp.svg" alt="Snooze" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+              
+              <div class="inbox-message-item  message-default-unread">
+
+                <div class="checkbox" style="margin-right: -12px;" >
+                  <button class="btn">
+                    <img src="./app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="Select" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
+                  </button>
+                </div>
+
+                <div class="message-group-hidden">
+                  <button class="btn-alt btn-nofill drag-indicator" >
+                    <img src="./app/assets/icons/drag_indicator_black_24dp.svg" alt="Drag" class="btn-icon-sm btn-icon-alt btn-icon-disabled" >
+                  </button>
+                </div>
+
+                <div >
+                  <button class="btn star" style="margin: 0;">
+                    <img src="./app/assets/icons/star_border_black_24dp.svg" alt="Not starred" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
+                  </button>
+                </div>
+
+                <div class="message-default" >
+
+                  <div class="message-sender message-content" >
+                    <span >Spotify</span>
+                  </div>
+      
+                  <div class="message-subject message-content">
+                    <span>🎉 💰 New Job who this? </span>
+                  </div>
+
+                  <div class="message-seperator message-content"> - </div>
+
+                  <div class="message-body message-content">
+                    <span> Hello, Habib! We are glad to break the news to you, amet consectetur adipisicing elit. Soluta error beatae optio ea, quod harum. Iure ab sed, dolores eos repudiandae inventore magnam id modi blanditiis harum at. Facere, exercitationem.</span>
+                  </div>
+                  
+                  <div class="gap message-content" > &nbsp; </div>
+
+                  <div class="message-date center-text" >
+                    <span>2:01 PM</span>
+                  </div>
+
+                </div>
+
+                <div class="message-group-hidden" >
+                  <div class="inbox-message-item-options">
+                    <button class="btn">
+                      <img src="./app/assets/icons/archive_black_24dp.svg" alt="Archive" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/delete_black_24dp.svg" alt="Delete" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/mark_as_unread_black_24dp.svg" alt="Mark as unread" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+      
+                    <button class="btn">
+                      <img src="./app/assets/icons/access_time_filled_black_24dp.svg" alt="Snooze" class="btn-icon-sm btn-icon-alt btn-icon-hover">
+                    </button>
+                  </div>
+                </div>
+
+              </div> -->
+
+          </div>
+
+          <!-- Fooooooooooter -->
+
+          <footer class="activity">
+            <div class="footer-container">
+
+              <div class="footer-item">
+                <span class="progressbar" ></span>
+                <a href="#" class="footer-link footer-text-sm">
+
+                  
+                  <div class="footer-group">
+                    <span> 0 GB of 15 GB used</span> 
+                    <span>
+                      <img style="height: 18px; width: 18px; margin: 0 8px; padding: 0;" src="./app/assets/icons/open_in_new_black_24dp.svg" alt="Google drive storage" class="btn-icon-alt btn-icon-sm">
+                    </span>
+                  </div>
+
+                </a>
+              </div>
+
+              <div class="footer-item">
+                <a href="#`" class="footer-link footer-text-sm">Terms</a>
+                ·
+                <a href="#" class="footer-link footer-text-sm">Privacy</a>
+                ·
+                <a href="#" class="footer-link footer-text-sm">Program Policies</a>
+              </div>
+
+              <div class="footer-item">
+                <span class="footer-text-sm" >Last activity: 37 minutes ago</span>
+                
+                <div class="footer-group">
+                  <a href="#" class="footer-link footer-text-sm">Details</a>
+                </div>
+              </div>
+
+            </div>
+          </footer>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT SIDEBAR -->
+
+    <section class="app-container" >
+
+      <div class="app-group">
+
+        <div class="app-item">
+          <button class="btn">
+            <img src="./app/assets/icons/calendar_2020q4_2x.png" alt="Calendar" class="btn-icon btn-icon-sm"">
+          </button>
+        </div>
+  
+        <div class="app-item">
+          <button class="btn">
+            <img src="./app/assets/icons/keep_2020q4v3_2x.png" alt="Keep" class="btn-icon btn-icon-sm">
+          </button>
+        </div>
+  
+        <div class="app-item">
+          <button class="btn">
+            <img src="./app/assets/icons/tasks2_2x.png" alt="Tasks" class="btn-icon btn-icon-sm">
+          </button>
+        </div>
+  
+        <div class="app-item">
+          <button class="btn">
+            <img src="./app/assets/icons/contacts_2x.png" alt="Contacts" class="btn-icon btn-icon-sm">
+          </button>
+        </div>
+  
+        <div class="btn btn-nofill" >
+          <div class="hrt-rule btn-icon-sm"></div>
+        </div>
+  
+        <div class="app-item">
+          <button class="btn">
+            <!-- <img src="./app/assets/icons/add_black_24dp.svg" alt="" class="btn-icon btn-icon-sm btn-icon-disabled"> -->
+
+            <svg class="btn-icon btn-icon-sm btn-icon-disabled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+      
+      <button class="btn">
+        <img src="./app/assets/icons/chevron_right_black_24dp.svg" alt="" class="btn-icon btn-icon-sm btn-icon-alt">
+      </button>
+
+    </section>
+
+  </div>
+
+
+  <script src="./mails.js"></script>
+  <script src="./morebtn.js"></script>
+  <script src="./object aray.js"></script>
 </body>
+
 </html>
