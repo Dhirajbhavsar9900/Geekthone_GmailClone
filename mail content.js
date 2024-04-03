@@ -12,6 +12,12 @@ let obj = [
     time: "02.03 pm",
   },
   {
+    name: "Wipro",
+    spantext: "Congratulation You are selected",
+    text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
+    time: "02.03 pm",
+  },
+  {
     name: "Bright",
     spantext: "Company News and Updates",
     text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
@@ -108,6 +114,8 @@ let obj = [
     time: "12:01 pm",
   },
 ];
+
+
 
 function plusLabel(obj) {
   let p = document.createElement("div");
