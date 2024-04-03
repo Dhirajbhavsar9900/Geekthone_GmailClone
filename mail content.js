@@ -121,8 +121,7 @@ function plusLabel(obj) {
   let p = document.createElement("div");
   p.className = "inbox-message-item message-default-unread";
 
-  p.innerHTML = `
-            <div class="checkbox" style="margin-right: -12px;">
+  p.innerHTML = `<div class="checkbox" style="margin-right: -12px;">
                 <button class="btn">
                     <img src="./app/assets/icons/check_box_outline_blank_black_24dp.svg" alt="Select" class="btn-icon-sm btn-icon-alt btn-icon-hover message-btn-icon">
                 </button>
@@ -168,8 +167,7 @@ function plusLabel(obj) {
                         <img src="./app/assets/icons/access_time_filled_black_24dp.svg" alt="Snooze" class="btn-icon-sm btn-icon-alt btn-icon-hover">
                     </button>
                 </div>
-            </div>
-        `;
+            </div>`;
 
   let pluslab = document.getElementById("mailss");
 
@@ -182,8 +180,6 @@ obj.forEach((objItem) => {
 });
 
 
-
-// delelte Btn JavaScript
 
 const deleteButtons = document.querySelectorAll('.delete-btn');
 deleteButtons.forEach(button => {
