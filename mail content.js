@@ -1,39 +1,39 @@
 let obj = [
   {
     name: "Geekster",
-    spantext: "lorem ipsum dolor sit amet",
+    spantext: "Here's to Geekster",
     text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
     time: "12:01 pm",
   },
   {
     name: "Tata",
-    spantext: "lorem ipsum dolor sit amet",
+    spantext: "Upcoming Company Announcement",
     text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
-    time: "12:01 pm",
+    time: "02.03 pm",
   },
   {
     name: "Bright",
-    spantext: "lorem ipsum dolor sit amet",
+    spantext: "Company News and Updates",
     text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
-    time: "12:01 pm",
+    time: "3:01 pm",
+  },
+  {
+    name: "Dream11",
+    spantext: "Update on Dream 11 contest",
+    text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
+    time: "06:44 am",
   },
   {
     name: "Dhiraj",
     spantext: "lorem ipsum dolor sit amet",
     text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
-    time: "12:01 pm",
+    time: "01.34 pm",
   },
   {
     name: "Dhiraj",
     spantext: "lorem ipsum dolor sit amet",
     text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
-    time: "12:01 pm",
-  },
-  {
-    name: "Dhiraj",
-    spantext: "lorem ipsum dolor sit amet",
-    text: "lorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy dellorem Ipsum dolor sit amet d portrait tempor inv sapien sed diam nonumy eirmod tempor invesi ut aliquy del",
-    time: "12:01 pm",
+    time: "02.06 pm",
   },
   {
     name: "Dhiraj",
@@ -110,6 +110,10 @@ let obj = [
 ];
 
 function plusLabel(obj) {
+
+
+
+  
   let p = document.createElement("div");
   p.className = "inbox-message-item message-default-unread";
 
@@ -134,7 +138,7 @@ function plusLabel(obj) {
                     <span>${obj.name}</span>
                 </div>
                 <div class="message-subject message-content">
-                    <span>${obj.spantext}</span>
+                    <span class="spantext">${obj.spantext}</span>
                 </div>
                 <div class="message-seperator message-content"> - </div>
                 <div class="message-body message-content">
@@ -142,7 +146,7 @@ function plusLabel(obj) {
                 </div>
                 <div class="gap message-content"> &nbsp; </div>
                 <div class="message-date center-text">
-                    <span>${obj.time}</span>
+                    <span class="span-time">${obj.time}</span>
                 </div>
             </div>
             <div class="message-group-hidden">
@@ -150,7 +154,7 @@ function plusLabel(obj) {
                     <button class="btn">
                         <img src="./app/assets/icons/archive_black_24dp.svg" alt="Archive" class="btn-icon-sm btn-icon-alt btn-icon-hover">
                     </button>
-                    <button class="btn">
+                    <button class="btn delete-btn">
                         <img src="./app/assets/icons/delete_black_24dp.svg" alt="Delete" class="btn-icon-sm btn-icon-alt btn-icon-hover">
                     </button>
                     <button class="btn">
@@ -163,14 +167,24 @@ function plusLabel(obj) {
             </div>
         `;
 
-  // Find the div with id 'pluslab'
   let pluslab = document.getElementById("mailss");
 
-  // Append the newly created div 'p' to the 'pluslab' div
+  
   pluslab.appendChild(p);
 }
 
-// Iterate over the obj array and call plusLabel() for each object
 obj.forEach((objItem) => {
   plusLabel(objItem);
 });
+
+
+
+// delelte Btn JavaScript
+
+const deleteButtons = document.querySelectorAll('.delete-btn');
+deleteButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        this.closest('.message-default-unread').style.display = 'none';
+    });
+});
+

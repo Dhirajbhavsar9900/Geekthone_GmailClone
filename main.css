@@ -223,6 +223,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 	grid-column: 1 / 2;
 	grid-row: 2 / -1;
+	margin-right: 10px;
 }
 
 .left-sidebar-compose {
@@ -935,14 +936,26 @@ input[type="search"]::-webkit-search-cancel-button {
 	padding: 14px;
 }
 
+.span-time{
+	color: black;
+	font-weight: 800;
+}
+
+.spantext{
+	color: black;
+	font-weight: 600;
+}
+
 #menu {
 	display: none;
   }
   
-  /* Show the menu when toggled */
-  #menu.show {
+
+#menu.show {
 	display: block;
-  }
+}
+
+
 
   
 
