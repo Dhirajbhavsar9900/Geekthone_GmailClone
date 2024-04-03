@@ -708,7 +708,8 @@ input[type="search"]::-webkit-search-cancel-button {
 	padding-right: 2rem;
 	overflow: hidden;
 	text-overflow: ellipsis;
-
+    font-weight: 800;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	flex: 0 0 200px;
 }
 
@@ -971,6 +972,7 @@ input[type="search"]::-webkit-search-cancel-button {
 		border-top-left-radius: 15px;
 		border-bottom-right-radius: 15px;
 	}
+	
 }
 
 
