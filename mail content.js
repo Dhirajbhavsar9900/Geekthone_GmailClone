@@ -110,10 +110,6 @@ let obj = [
 ];
 
 function plusLabel(obj) {
-
-
-
-  
   let p = document.createElement("div");
   p.className = "inbox-message-item message-default-unread";
 
