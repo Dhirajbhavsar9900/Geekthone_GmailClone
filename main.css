@@ -1045,9 +1045,48 @@ input[type="search"]::-webkit-search-cancel-button {
 	border-bottom: 1px solid rgb(212, 210, 210);
 }
 
-/* .newMsg{
-	background-color: red;
-} */
+
+.logout-dropdown {
+	position: absolute;
+	top: 60px; 
+	right: 20px;
+	z-index: 100; 
+  }
+  
+  .drop-down-content {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	display: none; 
+	border-radius: 5px; 
+	padding: 20px; 
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  .drop-down-content h1 {
+	margin: 0;
+	padding: 5px 0;
+	font-size: 16px;
+  }	
+
+  .logout-btn{
+	background-color: #0b57d0;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	padding: 10px 20px;
+	font-weight: 700;
+	border-radius: 30px;
+	width: 100%;
+  }
+  
+  .logout-btn:hover{
+    background-color: #000000;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+  }
+
 
 .textmsg{
 	resize: none;

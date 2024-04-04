@@ -19,23 +19,4 @@ document.addEventListener("DOMContentLoaded", function() {
         
         composePopup.style.display = 'none';
     });
-    const emails = [
-        { from: 'example1@gmail.com', subject: 'Meeting Reminder', body: 'Don\'t forget about the meeting tomorrow.' },
-        { from: 'example2@gmail.com', subject: 'Vacation Plans', body: 'Let\'s discuss our vacation plans for next month.' },
-       
-    ];
-
-    const emailList = document.querySelector('.email-list');
-    emails.forEach(email => {
-        const emailItem = document.createElement('div');
-        emailItem.classList.add('email');
-        emailItem.innerHTML = `
-            <div class="email-header">
-                <div>${email.from}</div>
-                <div>${email.subject}</div>
-            </div>
-            <div class="email-body">${email.body}</div>
-        `;
-        emailList.appendChild(emailItem);
-    });
 });
