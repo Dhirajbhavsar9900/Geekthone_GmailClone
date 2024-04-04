@@ -974,16 +974,15 @@ input[type="search"]::-webkit-search-cancel-button {
 .popup-content {
     float: right;
     background-color: #fefefe;
-	margin: 21% auto;
-
+    margin: 12% auto;
     padding: 20px;
     /* border: 1px solid #888; */
     /* width: 30%; */
     height: 65%;
-	margin-right: 70px;
-	border-radius: 15px;
-	box-shadow: 0 1px 22px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%); 		
-	border: none;
+    margin-right: 500px;
+    border-radius: 15px;
+    box-shadow: 0 1px 22px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+    border: none;
 }
 
 .close {
