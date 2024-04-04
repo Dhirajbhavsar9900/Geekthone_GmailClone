@@ -189,11 +189,11 @@ body.dark-mode {
     
 }
 
-/* @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
     .container {
         background-color: #ffffff;
         max-width: 400px;
-        margin: 200px auto;
+        margin: 100px auto;
         border-radius: 12px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
         overflow: hidden;
@@ -204,11 +204,11 @@ body.dark-mode {
     .CreateFromcontainer {
         background-color: #ffffff;
         max-width: 400px;
-        margin: 120px auto;
+        margin: 20px auto;
         border-radius: 12px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
         overflow: hidden;
         animation: bounceIn 1s ease-in-out forwards;
     }
 
-} */
+}
