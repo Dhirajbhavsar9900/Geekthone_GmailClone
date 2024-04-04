@@ -1,4 +1,4 @@
-#GmailClone
+#GmailClone,
 This is a simple clone of Gmail created for learning and practice purposes. It mimics some of the basic functionalities of the Gmail interface, such as composing and sending emails, searching for emails, and managing email threads.
 
 #Features
