@@ -8,6 +8,6 @@ function sendMessage(){
         Subject : "",
         Body : ""
     }).then(
-      message => alert(message)
+      message => alert("message")
     );
 }
